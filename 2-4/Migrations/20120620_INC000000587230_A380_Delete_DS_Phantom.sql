@@ -1,0 +1,1 @@
+delete from R_FIN_DS where fin_ds_sv = 'L 116RH       D057'

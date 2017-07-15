@@ -1,0 +1,1 @@
+update R_FIN_DS set EDD_Load_State = 'Validated' where  EDDReference = 'LOAD-838HKLD1-004'
