@@ -25,7 +25,7 @@ def main():
 #Как просили - вроде должно работать
     while True:
         all_results = list()
-        questions = input("Введите поисковый запрос\n").lower()
+        questions = input("Введите поисковый запрос: ").lower()
         for file in all_names_files:
             with open(file, 'r') as f:
                 line = f.read().lower()
