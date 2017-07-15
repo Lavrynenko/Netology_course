@@ -17,3 +17,4 @@ w = int(input('w: '))
 e = int(input('e: '))
 
 print (min(q, w, e))
+#Коммент
