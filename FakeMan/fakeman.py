@@ -47,32 +47,30 @@ surname_woman = ['Ковалёва', 'Ильина', 'Гусева', 'Титов
                  'Воробьева', 'Федорова', 'Михайлова', 'Беляева', 'Тарасова', 'Белова']
 
 #Генерируем номер паспорта
-serial_pass = (random.randrange (100000, 999999))
-print (serial_pass)
-#print (random.randrange(1, 9))
-print (random.sample('абвгдеёжзийклмнопрстуфхцчшщъыьэюя', 2))
-
-print ('В списке мужских имен:', len(surname_man))
-
-print ('В списке женских имен:', len(surname_woman))
-random_surname_woman = len(surname_woman)
-random_surname_woman_text = (random.randrange(1, random_surname_woman))
-print (surname_woman[random_surname_woman_text])
-
 sex = str(input('Генерируем мужчину или женщину? : '))
 if sex == 'мужчину':
-    print ('Генерируем мужчину')
-else:
-    print ('Сгенерированные женские данные:\n')
-    print ('Паспорт серии: ', random.sample('абвгдеёжзийклмнопрстуфхцчшщъыьэюя', 2))
+    print ('Сгенерированне мужские данные:\n')
     serial = []
     serial = random.sample('абвгдеёжзийклмнопрстуфхцчшщъыьэюя', 2)
     print (serial)
-    print (serial[0][1])
+    print ('Номер паспорта: ', random.randrange(100000, 999999))
+    quantity_name = len(name_man)
+    quantity_random_name = (random.randrange(0, quantity_name))
+    print ('Имя: ', (name_man[quantity_random_name]))
+    quantity_name = len(surname_man)
+    quantity_random_name = (random.randrange(0, quantity_name))
+    print ('Фамилия: ', surname_man[quantity_random_name])
+    print ('Возраст: ', random.randrange(18, 65))
+else:
+    print ('Сгенерированные женские данные:\n')
+    serial = []
+    serial = random.sample('абвгдеёжзийклмнопрстуфхцчшщъыьэюя', 2)
+    print (serial)
     print ('Номер паспорта: ', random.randrange (100000, 999999))
     quantity_name = len(name_woman)
-    random_surname_woman = random.randrange(0, quantity_name)
-    len(name_woman)
-    random_name = name_woman[len]
-    print ('Имя: ', )
-
+    quantity_random_name = (random.randrange(0, quantity_name))
+    print ('Имя: ', (name_woman[quantity_random_name]))
+    quantity_name = len(surname_woman)
+    quantity_random_name = (random.randrange(0, quantity_name))
+    print ('Фамилия: ', surname_woman[quantity_random_name])
+    print ('Возраст: ', random.randrange(18, 65))
