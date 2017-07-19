@@ -18,9 +18,9 @@ def get_translations(API, URL, text, from_lang, to_lang):
 
 def resp_status(resp):
     if resp.status_code == 200:
-        print('Код ответа {}. Перевод завершён!'.format(resp.status_code))
+        print('Ответ {}. Все готово!'.format(resp.status_code))
     else:
-        print('Код ответа {}! Что-то пошло не так..'.format(resp.status_code))
+        print('Ответ {}! Возникли ошибки :('.format(resp.status_code))
 
 def main():
     API = 'trnsl.1.1.20141123T002340Z.2611ecba0f781c6c.b69c51344c53ff99342f75f37c25d9b23f7cb69f'
@@ -28,7 +28,7 @@ def main():
 
     directory_exist()
 
-    from_lang = input('Введите переводимый текст\n de - немецкий\n es - Испанский\n fr - французский')
+    from_lang = input('Что переводим?\n de - немецкий\n es - Испанский\n fr - французский')
     if from_lang == 'de':
         from_lang = 'de'
         lang_file = 'DE.txt'
