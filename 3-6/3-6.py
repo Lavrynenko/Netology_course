@@ -24,59 +24,59 @@ class Birdies(Animal):
 
 
 class Cattle(Cattles):
-    word = 'mooooooooooooooo'
-    flying = 'Я не умею летать'
+    word = 'Му-у-у-у-у!'
+    flying = 'Умеют. Но только в мультике Тайна третьей планеты :) '
 
     def eat(self):
-        print('Я ем людей!')
+        print('Траву жует... Много')
 
 
 class Goat(Cattles):
-    word = 'beeeeeeeeeeeeeeee'
-    flying = 'Я не умею летать'
+    word = 'М-э-э-э!'
+    flying = 'Облом :( '
 
     def eat(self):
-        print('Я ем травушку-муравушку!')
+        print('Травку пощипал, и порядок!')
 
 
 class Sheep(Cattles):
-    word = 'Sheep says beee?'
-    flying = 'Я не умею летать'
+    word = 'Бэ-э-э-э'
+    flying = 'Увы :( '
 
     def eat(self):
-        print('Я ем марсиан!')
+        print('Травку на зеленых лугах Шотландии')
 
 
 class Pig(Cattles):
-    word = 'Pig says hryu =)'
-    flying = 'Я не умею летать'
+    word = 'Хрю-хрю'
+    flying = 'Если бы свиньи могли летать - это был бы низколетящий бомбардировщик'
 
     def eat(self):
-        print('Я ем гусей!')
+        print('Фигню какую-то ем. Свинья, фигли')
 
 
 class Duck(Birdies):
-    word = 'You can eat the duck'
-    flying = 'Я умею летать'
+    word = 'Кря-кря'
+    flying = 'А как еще на нас охотники охотятся?'
 
     def eat(self):
-        print('Я ем хлеб!')
+        print('В воде фигню всякую ловлю и ем :(')
 
 
 class Chicken(Birdies):
-    word = 'Chicken says kukareku'
-    flying = 'Я умею летать'
+    word = 'Ку-ка-ре-ку!'
+    flying = 'Жизнь придавит - летаю'
 
     def eat(self):
-        print('Я ем зерно!')
+        print('С зернышка на зернышко перебиваюсь!')
 
 
 class Goose(Birdies):
-    word = 'Goose says krya-krya'
-    flying = 'Я умею летать'
+    word = 'Кря!'
+    flying = 'Умею. Вон, с Нильсом недавно круто потусили'
 
     def eat(self):
-        print('Я ем рестлеров!')
+        print('Кого поймаю, того и ем!')
 
 
 def main():
@@ -97,8 +97,8 @@ def main():
     animals = animals.get(user_input)
     print(animals)
 
-    user_input_seccond = input('Что будем делать с животным? \n Примеры команд:\n say - что говорит животное \n '
-                               'eat - что ест жЫвотное \n fly - умеет ли летать \n')
+    user_input_seccond = input('Что будем делать с животным? \n Варианты:\n say - заставить животное говорить \n '
+                               'eat - узнать, что оно ест \n fly - узнать, умеет ли оно летать \n')
 
     if user_input_seccond == 'say':
         animals.say()
