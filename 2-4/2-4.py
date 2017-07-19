@@ -32,8 +32,13 @@ def main():
                 if questions in line:
                     all_results.append(file)
 
-        if len(all_results) == 0:
+        all_names_files = all_results
+
+        if len(all_results) == 0:  # если после цикла получаем нуль, запускаем функцию заново
             print("К сожалению, ничего не найдено.Поиск начинается заново.")
             main()
+        else:
+            pprint(all_results)
+            pprint("Всего найдено: {} файлов в all_results".format(len(all_results)))
 
 main()
