@@ -13,6 +13,13 @@ class Animal:
         else:
             print(self.flying)
 
+    def fly2(self):
+        flyers = bool(input('Пнем ногой? '))
+        if flyers == True:
+            print (self.flying)
+        elif flyers == False:
+            raise NotImplementedError
+
 class Cattles(Animal):
     pass
 
@@ -99,7 +106,9 @@ def main():
     if user_input_seccond == 'eat':
         animals.eat()
     if user_input_seccond == 'fly':
-        animals.fly()
-
+        animals.fly2()
 
 main()
+
+# Изменить работу метода fly, который будет зависеть от булевого значения атрибута flying.
+# Добавить в классы Cattles и Bierdies по одному методу, который будет специфичен для данных классов.
