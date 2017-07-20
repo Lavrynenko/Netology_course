@@ -7,21 +7,17 @@ class Animal:
         else:
             print(self.word)
 
-
     def fly(self):
         if not self.flying:
             raise NotImplementedError
         else:
             print(self.flying)
 
-
 class Cattles(Animal):
     pass
 
-
 class Birdies(Animal):
     pass
-
 
 class Cattle(Cattles):
     word = 'Му-у-у-у-у!'
@@ -30,14 +26,12 @@ class Cattle(Cattles):
     def eat(self):
         print('Траву жует... Много')
 
-
 class Goat(Cattles):
     word = 'М-э-э-э!'
     flying = 'Облом :( '
 
     def eat(self):
         print('Травку пощипал, и порядок!')
-
 
 class Sheep(Cattles):
     word = 'Бэ-э-э-э'

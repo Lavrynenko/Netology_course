@@ -75,7 +75,7 @@ class Counter(MetrikaBase):
 def main():
     metrika = YandexMetrika(token)
     counters = metrika.get_counters()
-    # print(counters)
+    #print(counters)
 
     for counter_id in counters:
         pprint("Количество визитов - {}".format(round(counter_id.get_visits(), 2)))
