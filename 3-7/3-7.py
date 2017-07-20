@@ -70,7 +70,7 @@ class Counter(MetrikaBase):
             'date2': 'today',
         }
         r = requests.get(self.API_STAT_URL + 'data', params, headers=headers)
-        return r.json()['data'][0]['metrics'][0]
+        return r.json()['totals'][0]
 
 def main():
     metrika = YandexMetrika(token)
