@@ -4,29 +4,28 @@ import time
 import json
 
 token = '5dfd6b0dee902310df772082421968f4c06443abecbc082a8440cb18910a56daca73ac8d04b25154a1128'
-VERSION = "5.67"
+VERSION = '5.67'
 
-def id(id_user):
-    id = bool(input(print('Смотрим пользователя ''По-умолчанию'' (кликните Enter) или введем своего (тогда нажмите \
-    что-нибудь на клавиатуре :) ')))
-    if id == True:
-        id_user = int(input('Введите id-номер пользователя'))
-        return id_user
-    elif id == False:
-        id_user = int(input('Смотрим по-умолчанию'))
-        id_user = int(5030613)
+# def id():
+#     user_id = bool(input('Используем данные пользователя по-умолчанию (просто нажмите Enter) или узнаем что-то о \
+#     другом пользователе (нажмите ''Y''?'))
+#     if user_id == False:
+#         print ('Работаем с пользователем по-умолчанию')
+#     elif user_id == True:
+#         print('Введите ИД пользователя, за которым нужно проследить?')
+#     доделать код выбора пользователя
 
 def groups_our_user():
     params = {
         'access_token': token,
         'v': VERSION,
         'user_id': 5030613,
-        'count': 50,  # выбираем количество
+        'count': 50,
     }
 
     response = requests.get('https://api.vk.com/method/groups.get', params)
     all_groups = response.json()['response']['items']
-    print(".")
+    print('.')
     print(all_groups)
 
     return all_groups
@@ -37,17 +36,17 @@ def get_friends_our_user():
         'access_token': token,
         'v': VERSION,
         'user_id': 5030613,
-        'count': 50,  # выбираем количество
+        'count': 50,
         'fields': 'screen_name',
     }
     response = requests.get('https://api.vk.com/method/friends.get', params)
     friends_our_user = response.json()['response']['items']
-    print(".")
+    print('.')
 
     return friends_our_user
 
 
-def get_all_groups_on_user_friends(all_groups=""):
+def get_all_groups_on_user_friends(all_groups=''):
     our_user_friends = get_friends_our_user()
 
     all_groups_on_user_friends = list()
@@ -65,7 +64,7 @@ def get_all_groups_on_user_friends(all_groups=""):
                 }
                 response = requests.get('https://api.vk.com/method/groups.get', params)
                 all_groups_name_and_count.extend(response.json()['response']['items'])
-                print(".")
+                print('.')
                 time.sleep(1)
 
                 return all_groups_name_and_count
@@ -82,7 +81,7 @@ def get_all_groups_on_user_friends(all_groups=""):
                 }
                 response = requests.get('https://api.vk.com/method/groups.get', params)
                 all_groups_on_user_friends.extend(response.json()['response']['items'])
-                print(".")
+                print('.')
                 time.sleep(0.4)
 
     except KeyError:
@@ -96,14 +95,14 @@ def get_all_groups_on_user_friends(all_groups=""):
                 'count': 1
             }
             response = requests.get('https://api.vk.com/method/groups.get', params)
-            print(".")
+            print('.')
             time.sleep(0.4)
 
     return all_groups_on_user_friends
 
 
 def main():
-#    id()
+#   id()
     our_user_group = groups_our_user()
     all_groups_on_user = get_all_groups_on_user_friends()
 
@@ -120,9 +119,9 @@ def main():
 
         all_groups.append(result)
 
-    with open('groups.json', 'w', encoding='utf8') as f:  # закидываем полученные данные в файл
+    with open('groups.json', 'w', encoding='utf8') as f:
         json.dump(all_groups, f, indent=2, ensure_ascii=False)
-        print("Все данные в файле groups.json!")
+        print('Вся информация в файле groups.json!')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
