@@ -124,4 +124,4 @@ def main():
         print('Вся информация в файле groups.json!')
 
 if __name__ == '__main__':
-    main()
+    main(
