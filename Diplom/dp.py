@@ -6,14 +6,16 @@ import json
 token = '5dfd6b0dee902310df772082421968f4c06443abecbc082a8440cb18910a56daca73ac8d04b25154a1128'
 VERSION = '5.67'
 
-# def id():
-#     user_id = bool(input('Используем данные пользователя по-умолчанию (просто нажмите Enter) или узнаем что-то о \
-#     другом пользователе (нажмите ''Y''?'))
-#     if user_id == False:
-#         print ('Работаем с пользователем по-умолчанию')
-#     elif user_id == True:
-#         print('Введите ИД пользователя, за которым нужно проследить?')
-#     доделать код выбора пользователя
+# def id_users():
+#   userid = bool(input('Используем данные пользователя по-умолчанию (просто нажмите Enter) или узнаем что-то о \
+#   другом пользователе (нажмите ''Y''?'))
+#   if userid == False:
+#     user_id = '5030613'
+#     return user_id
+#   elif userid == True:
+#     user_id = int(input('Введите ID-пользователя, за которым нужно проследить: '))
+#     return user_id
+#   #Кусок пока не доделан, в дороге
 
 def groups_our_user():
     params = {
@@ -124,4 +126,4 @@ def main():
         print('Вся информация в файле groups.json!')
 
 if __name__ == '__main__':
-    main(
+    main()
