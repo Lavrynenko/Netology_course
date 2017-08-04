@@ -21,7 +21,3 @@ print('Исходный код страницы сохранен в файл')
 
 #Начинаем парсить по регулярному выражению
 pattern = '(?<=photoUrl&quot;:&quot;)https://cdn\.inmyroom\.ru/uploads/photo[\w\W]*?\.jpg(?=&quot;}"\ data-component)'
-regexpr = re.compile(pattern)
-in_file = open('temp.txt')
-result = []
-for line in in_file:
