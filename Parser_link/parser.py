@@ -6,11 +6,11 @@ import urllib
 #Открываем файл со ссылкой на нужную страницу
 f = open('link.txt','r', encoding='utf8')
 link = f.readline()
-print(link)
+#print(link)
 
 #Получаем ответ страницы и выводим исходный код страницы
 response = requests.get(link)
-print (response.content)
+#print (response.content)
 
 #Сохраняем исходный код страницы во временный файл
 f = open('temp.txt', 'wb')
