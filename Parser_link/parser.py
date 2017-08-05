@@ -20,4 +20,4 @@ f.close()
 print('Исходный код страницы сохранен в файл')
 
 #Начинаем парсить по регулярному выражению
-pattern = '(?<=photoUrl&quot;:&quot;)https://cdn\.inmyroom\.ru/uploads/photo[\w\W]*?\.jpg(?=&quot;}"\ data-component)'
+regxp = '(?<=photoUrl&quot;:&quot;)https://cdn\.inmyroom\.ru/uploads/photo[\w\W]*?\.jpg(?=&quot;}"\ data-component)'
