@@ -38,7 +38,7 @@ f = open('fulllink.txt', 'w')
 f.write(result)
 f.close()
 
-stream = urlopen(url)
+#stream = urlopen(url)
 
 url = 'https://cdn.inmyroom.ru/uploads/photo/file/cf/cf01/original_cf016769-0086-4a61-8303-143ebe95879f.jpg'
 img = urllib.request.urlopen(url).read()
