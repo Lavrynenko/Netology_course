@@ -46,14 +46,17 @@ surname_woman = ['Ковалёва', 'Ильина', 'Гусева', 'Титов
                  'Соловьева', 'Васильева', 'Зайцева', 'Павлова', 'Семенова', 'Голубева', 'Виноградова', 'Богданова', \
                  'Воробьева', 'Федорова', 'Михайлова', 'Беляева', 'Тарасова', 'Белова']
 
-#Генерируем номер паспорта
+#Запрашиваем пол генерируемого персонажа
 sex = str(input('Генерируем мужчину или женщину? : '))
 if sex == 'мужчину':
     print ('Сгенерированне мужские данные:\n')
     serial = []
     serial = random.sample('абвгдеёжзийклмнопрстуфхцчшщъыьэюя', 2)
-    print (serial)
-    print ('Номер паспорта: ', random.randrange(100000, 999999))
+    serial_1 = serial[0]
+    serial_2 = serial[1]
+    serial = serial_1 + serial_2
+    number_pass = random.randrange (100000, 999999)
+    print ('Серия и номер паспорта: {} {}'. format(serial.upper(), number_pass))
     quantity_name = len(name_man)
     quantity_random_name = (random.randrange(0, quantity_name))
     print ('Имя: ', (name_man[quantity_random_name]))
@@ -65,8 +68,12 @@ else:
     print ('Сгенерированные женские данные:\n')
     serial = []
     serial = random.sample('абвгдеёжзийклмнопрстуфхцчшщъыьэюя', 2)
-    print (serial)
-    print ('Номер паспорта: ', random.randrange (100000, 999999))
+    serial_1 = serial[0]
+    serial_2 = serial[1]
+    serial = serial_1 + serial_2
+    #print (serial)
+    number_pass = random.randrange (100000, 999999)
+    print ('Серия и номер паспорта: {} {}'. format(serial.upper(), number_pass))
     quantity_name = len(name_woman)
     quantity_random_name = (random.randrange(0, quantity_name))
     print ('Имя: ', (name_woman[quantity_random_name]))
