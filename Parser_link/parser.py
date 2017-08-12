@@ -1,4 +1,3 @@
-#import requests
 import requests
 import re
 import urllib
