@@ -8,14 +8,16 @@ import urllib.request
 import urllib.request
 from urllib.request import urlopen
 
+#Запрос на ссылку от пользователя
+link = input(str('Введите ссылку на файл: '))
+
 #Открываем файл со ссылкой на нужную страницу
-f = open('link.txt','r', encoding='utf8')
-link = f.readline()
+# f = open('link.txt','r', encoding='utf8')
+# link = f.readline()
 #print(link)
 
 #Получаем ответ страницы и выводим исходный код страницы
 response = requests.get(link)
-#print (response.content)
 
 #Сохраняем исходный код страницы во временный файл
 f = open('temp.txt', 'wb')
@@ -28,7 +30,6 @@ print('Исходный код страницы сохранен в файл')
 pars = []
 with open('temp.txt', 'r', encoding='utf8') as f:
     pars = f.read()
-#print (pars)
 regxp = '(?<=photoUrl&quot;:&quot;)(https:\/\/cdn\.inmyroom\.ru\/uploads\/photo.*?\.jpg)(?=&quot;}\"><noscript)'
 result = re.findall(regxp, pars)
 
