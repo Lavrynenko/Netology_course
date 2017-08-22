@@ -10,11 +10,6 @@ from urllib.request import urlopen
 #Запрос на ссылку от пользователя
 link = input(str('Введите ссылку на страницу: '))
 
-#Открываем файл со ссылкой на нужную страницу
-# f = open('link.txt','r', encoding='utf8')
-# link = f.readline()
-#print(link)
-
 #Получаем ответ страницы и выводим исходный код страницы
 response = requests.get(link)
 
@@ -33,13 +28,3 @@ regxp = '(?<=photoUrl&quot;:&quot;)(https:\/\/cdn\.inmyroom\.ru\/uploads\/photo.
 result = re.findall(regxp, pars)
 
 result = list(result)
-counter = int(1)
-for link in result:
-    print(link)
-    url = link
-    img = urllib.request.urlopen(url).read()
-    filename = "counter_{}.jpg".format(counter)
-    out = open(filename, "wb")
-    out.write(img)
-    out.close
-    counter = counter + 1
