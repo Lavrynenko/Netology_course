@@ -3,19 +3,23 @@ import requests
 import time
 import json
 
+"""
+Основная проблема в Вашей работе это то, что Вы в параметрах к запросу пишите
+'count': 50,
+Тем самым ограничивая список людей в группе. Из-за этого возникают ошибки. Если этот параметр убрать будет лучше. 2. Вторая проблема это повторяющийся params во всех запросах, хотя он отличается только user_id. 3. В функции get_all_groups_on_user_friends условие лишние
+
+if all_groups:
+и в try достаточно обернуть только
+
+response = requests.get('https://api.vk.com/method/groups.get', params)
+
+"""
+
+
+
+
 token = '5dfd6b0dee902310df772082421968f4c06443abecbc082a8440cb18910a56daca73ac8d04b25154a1128'
 VERSION = '5.67'
-
-# def id_users():
-#   userid = bool(input('Используем данные пользователя по-умолчанию (просто нажмите Enter) или узнаем что-то о \
-#   другом пользователе (нажмите ''Y''?'))
-#   if userid == False:
-#     user_id = '5030613'
-#     return user_id
-#   elif userid == True:
-#     user_id = int(input('Введите ID-пользователя, за которым нужно проследить: '))
-#     return user_id
-#   #Кусок пока не доделан, в дороге
 
 def groups_our_user():
     params = {
