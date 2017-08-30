@@ -5,13 +5,14 @@ import json
 
 """
 Основная проблема в Вашей работе это то, что Вы в параметрах к запросу пишите
-'count': 50,
-Тем самым ограничивая список людей в группе. Из-за этого возникают ошибки. Если этот параметр убрать будет лучше. 2. Вторая проблема это повторяющийся params во всех запросах, хотя он отличается только user_id. 3. В функции get_all_groups_on_user_friends условие лишние
-
-if all_groups:
-и в try достаточно обернуть только
+'count': 50, Тем самым ограничивая список людей в группе. Из-за этого возникают ошибки. Если этот параметр убрать будет лучше. 
+2. Вторая проблема это повторяющийся params во всех запросах, хотя он отличается только user_id. 
+3. В функции get_all_groups_on_user_friends условие лишние if all_groups:
+и в try достаточно обернуть только 
 
 response = requests.get('https://api.vk.com/method/groups.get', params)
+
+171691064 - ID - юзера
 
 """
 
@@ -25,8 +26,8 @@ def groups_our_user():
     params = {
         'access_token': token,
         'v': VERSION,
-        'user_id': 5030613,
-        'count': 50,
+        'user_id': 171691064,
+        # 'count': 50,
     }
 
     response = requests.get('https://api.vk.com/method/groups.get', params)
@@ -41,7 +42,7 @@ def get_friends_our_user():
     params = {
         'access_token': token,
         'v': VERSION,
-        'user_id': 5030613,
+        'user_id': 171691064,
         'count': 50,
         'fields': 'screen_name',
     }
