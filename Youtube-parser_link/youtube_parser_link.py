@@ -4,8 +4,6 @@
 2. Парсим все ссылки на видео
 3. Сохраняем всем видео с канала
 
-http://san-tit.blogspot.com/2017/02/youtube.html
-
 https://www.youtube.com/watch?v=I5ZBr3-3lPc
 """
 
