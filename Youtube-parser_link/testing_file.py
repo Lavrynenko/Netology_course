@@ -110,7 +110,15 @@ print('В итоге выбранный формат: ',result_select)
 
 #print('Вывод фильтра', yt.filter('mp4')[-1])
 # video = yt.get('mp4', '360p') - нужно и рабочая версия
-video = yt.get('mp4', '360p')
+select_select = str('mp4')
+print('Select_select: ',select_select)
+select_select = str(result_select)
+print('новый Select_Select: ', )
+
+select = str(result_select)
+print('Что такое Select: ',result_select)
+
+video = yt.get(select_select, '360p')
 
 # video = yt.get('mp4', '720p')
 # # video.download(final_link)
