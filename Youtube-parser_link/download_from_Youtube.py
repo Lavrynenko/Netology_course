@@ -1,6 +1,5 @@
 import re
 from pytube import YouTube
-from pprint import pprint
 import urllib
 import urllib.request
 from urllib.request import urlopen
