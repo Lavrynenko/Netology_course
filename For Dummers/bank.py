@@ -16,3 +16,4 @@ while i <= term_of_deposit:
     print('В', i,'год на вклад в размере', round(money_start, 1),'набежит', round(interest_amount, 1),'денег. Общая сумма после', i, \
           'года составит', round(money_start, 1),'денег')
     i = i + 1
+print('Итого будет: ', round(money_start, 1)) #Выводим окончательную сумму

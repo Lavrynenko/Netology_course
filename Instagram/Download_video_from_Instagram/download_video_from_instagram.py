@@ -1,15 +1,3 @@
-'''
-Сохранялка видео с Инстаграм
-https://www.instagram.com/p/BZ29uCuFtu8/?taken-by=dior
-
-<video class="_l6uaz" playsinline="" poster=
-"https://instagram.fiev4-1.fna.fbcdn.net/t51.2885-15/e15/22159514_126946101296820_6166316016092577792_n.jpg"
-preload="none" src="https://instagram.fiev4-1.fna.fbcdn.net/t50.2886-16/22244005_748945478622689_2292981420408176640_n.mp4"
-type="video/mp4"></video>
-
-
-http([^"]+)mp4
-'''
 from urllib import request
 import urllib.request
 import re

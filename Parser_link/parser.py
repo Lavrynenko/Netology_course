@@ -35,7 +35,7 @@ result = re.findall(regxp, pars)
 result = list(result)
 counter = int(1)
 for link in result:
-    print(link)
+    print('Сохраняем: ', link)
     url = link
     img = urllib.request.urlopen(url).read()
     filename = "counter_{}.jpg".format(counter)
@@ -43,3 +43,4 @@ for link in result:
     out.write(img)
     out.close
     counter = counter + 1
+    print(link, '- сохранен')
