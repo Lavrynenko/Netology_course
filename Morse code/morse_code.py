@@ -224,25 +224,6 @@ def morse_text():
     morse_table = ''.join(morse_table)
     print('Единой строкой: ', morse_table)
 
-
-
-    # text = []
-    # text = str(input('Введите код Морзе: '))
-    # print(text)
-    # morse = []
-    # for string in text:
-    #     if string == '.-':
-    #         morse_code = ('а')
-    #         morse.append(morse_code)
-    #     elif string == '-...':
-    #         morse_code = ('б')
-    #         morse.append(morse_code)
-
-
-    # morse = ''.join(morse)
-    # print('Единой строкой: ', morse)
-
-
 def text_morse():
     text = []
     text = str(input('Введите текст: ')).lower()
