@@ -177,48 +177,46 @@ def morse_text():
             morse_code = (', ')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == ': ':
-            morse_code = ('---...')
+        elif string == '---...':
+            morse_code = (':')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == ';':
-            morse_code = ('-.-.-')
+        elif string == '-.-.-':
+            morse_code = (';')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == '(':
-            morse_code = ('-.--.-')
+        elif string == '-.--.-':
+            morse_code = ('(')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == ')':
-            morse_code = ('-.--.-')
+        elif string == '-.--.-':
+            morse_code = (')')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == '"':
-            morse_code = ('.-..-.')
+        elif string == '.-..-.':
+            morse_code = ('"')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == '?':
-            morse_code = ('..--..')
+        elif string == '..--..':
+            morse_code = ('?')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == '!':
-            morse_code = ('--..--')
+        elif string == '--..--':
+            morse_code = ('!')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == '@':
-            morse_code = ('.--.-.')
+        elif string == '.--.-.':
+            morse_code = ('@')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == '-':
-            morse_code = ('-....-')
+        elif string == '-....-':
+            morse_code = ('-')
             print(morse_code)
             morse_table.append(morse_code)
-        elif string == ' ':
-            morse_code = ('.......')
+        elif string == '.......':
+            morse_code = (' ')
             print(morse_code)
             morse_table.append(morse_code)
-
-
 
     print(morse_table)
     morse_table = ''.join(morse_table)
