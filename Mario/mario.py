@@ -1,27 +1,48 @@
-'''
-Первая версия программы делает ступеньки заданной длины (не больше 14) просто по наполнению
-Вторая версия программы делает ступеньку Марио заданной длины (не больше 14)
-Третья версия программы делает две ступеньки Марио заданной длины (не больше 14 каждая)
+piramide = []
+stage = 0
+text = str('#')
 
-'''
+rl = str(input('Строим пирамиду. \n - Выравнивание по левому краю (вариант 1) - нажмите 1 \n'
+               ' - Выравнивание по левому краю (вариант 2) - нажмите 2 \n - По правому краю - нажмите 3 \n'
+               ' - По центру - нажмите 4 \n - По центру (вариант 2) - нажмите 5 ?: '))
 
-def choice():
-    choice = str(input(Строим обратные ступеньки (1), ступеньки Марио (2) или башни (3)? : )))
-    print('Вы выбрали ', choice)
-    if choice == ('1'):
-        stairr()
-    elif choice == ('2'):
-        stair()
-    elif choice == ('3'):
-        stairs()
+quantity = int(input('Количество ярусов в пирамиде?: '))
 
-def stairr():
+if rl == '1':
+    while stage < quantity:
+        piramide.append(text)
+        print(text.ljust(quantity))  # Выравниваем по правой стороне. Если по левой: ljust
+        stage = stage + 1
+        text = text + '#'
 
+if rl == '2':
+    pyramide = []
+    # print(quantity)
+    stage = 0
+    while stage < quantity:
+        lattice = '#'
+        pyramide.append(lattice)
+        stage = stage + 1
+        print(''.join(pyramide))
 
-def stair():
+elif rl == '3':
+    while stage < quantity:
+        piramide.append(text)
+        print(text.rjust(quantity))  # Выравниваем по правой стороне. Если по левой: ljust
+        stage = stage + 1
+        text = text + '#'
 
+elif rl == '4':
+    while stage < quantity:
+        piramide.append(text)
+        print(text.center(quantity * 2))  # Выравниваем по центру.
+        stage = stage + 1
+        text = text + '##'
 
-def stairs():
-
-
-choice()
+elif rl == '5':
+    text = '##'
+    while stage < quantity:
+        piramide.append(text)
+        print(text.center(quantity * 2))  # Выравниваем по центру.
+        stage = stage + 1
+        text = text + '##'
