@@ -11,7 +11,7 @@ quantity = int(input('Количество ярусов в пирамиде?: ')
 if rl == '1':
     while stage < quantity:
         piramide.append(text)
-        print(text.ljust(quantity))  # Выравниваем по правой стороне. Если по левой: ljust
+        print(text.ljust(quantity))
         stage = stage + 1
         text = text + '#'
 
@@ -28,14 +28,14 @@ if rl == '2':
 elif rl == '3':
     while stage < quantity:
         piramide.append(text)
-        print(text.rjust(quantity))  # Выравниваем по правой стороне. Если по левой: ljust
+        print(text.rjust(quantity))
         stage = stage + 1
         text = text + '#'
 
 elif rl == '4':
     while stage < quantity:
         piramide.append(text)
-        print(text.center(quantity * 2))  # Выравниваем по центру.
+        print(text.center(quantity * 2))
         stage = stage + 1
         text = text + '##'
 
@@ -43,6 +43,6 @@ elif rl == '5':
     text = '##'
     while stage < quantity:
         piramide.append(text)
-        print(text.center(quantity * 2))  # Выравниваем по центру.
+        print(text.center(quantity * 2))
         stage = stage + 1
         text = text + '##'
