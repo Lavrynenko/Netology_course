@@ -4,12 +4,24 @@
 3. Если блог живой - сохраняем имя в список "Жив", если удален - в список "Удален"
 '''
 import requests
+full_list = []
 
-with open('link_to_blogs.txt', 'r', encoding='utf8') as f:
+protocol = str('https://')
+domain = str('.wordpress.com')
+with open('blog.txt', 'r', encoding='utf8') as f:
     for blog in f:
-        print(blog)
-        r = requests.get(blog)
-        print(r.status_code)
-
-# r = requests.get('https://lavrynenko.wordpress.com')
-# print(r.headers)
+        # print(blog)
+        blog = str(blog.strip())
+        # print(blog)
+        lll = protocol + blog + domain
+        print(lll)
+        full_list.append(lll)
+#print('Выводим полный список ссылок: \n')
+#print(full_list)
+print('А теперь проверка: \n')
+for blog in full_list:
+    r = requests.get(blog)
+    print(blog, ': ', r.headers)
+    headers = str(r.headers)
+    with open('statistics.txt', 'a', encoding='utf8') as f:
+        f.write(headers + '\n \n \n')
