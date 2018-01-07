@@ -28,7 +28,7 @@ if var == 1:
     # Считаем длину
     elif convertation == 3:
         dlina == int(input(' 1. Километры -> мили\n 2. Метры -> Ярды\n 3. Метры -> футы\n 4. Сантиметры -> дюймы\
-        \n 5. Милиметры -> дюймы \n'))
+        \n 5. Миллиметры -> дюймы \n'))
         if dlina == 1:
             value_dlina = float(input('Сколько километров? :\n'))
             print(value_dlina, 'километров составляют', round((value_dlina * 1.60934), 2),'миль')
@@ -41,6 +41,20 @@ if var == 1:
         elif dlina == 4:
             value_dlina = float(input('Сколько сантиметров? :\n'))
             print(value_dlina,'сантиметров составляют', round((value_dlina * 2.5400013716), 2), 'дюймов')
+        elif dlina == 5:
+            value_dlina = float(input('Сколько милиметров? :\n'))
+            print(value_dlina,'миллиметров составляет', round((value_dlina / 0.0393701), 2) ,'дюймов')
+
+    # Считаем объем
+    elif convertation == 4:
+        space = int(input(' 1.Литры -> галлоны\n 2. Литры -> пинты\n')
+        if space == 1:
+            value_space = float(input('Сколько литров? :'))
+            print(value_space,'литров составляет', round((value_space / 3.785411784), 2), 'галлонов')
+        elif value_space == 2:
+            value_space = float('Сколько литров? :\n')
+            print(value_space, 'литров составляет', round((value_space / 0.56826125), 2), 'пинт')
+
 
 elif var == 2:
     print('Конвертация из неметрической в метрическую')
@@ -53,3 +67,5 @@ elif var == 2:
         elif convertation == 2:
             kelvin = float(input('Сколько градусов по Кельвину? :\n'))
             print(kelvin, 'градусов по Кельвину составляет', kelvin - 273.15, 'градусов по Цельсию')
+
+
