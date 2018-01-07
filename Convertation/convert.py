@@ -27,7 +27,7 @@ if var == 1:
 
     # Считаем длину
     elif convertation == 3:
-        dlina == int(input(' 1. Километры -> мили\n 2. Метры -> Ярды\n 3. Метры -> футы\n 4. Сантиметры -> дюймы\
+        dlina = int(input(' 1. Километры -> мили\n 2. Метры -> Ярды\n 3. Метры -> футы\n 4. Сантиметры -> дюймы\
         \n 5. Миллиметры -> дюймы \n'))
         if dlina == 1:
             value_dlina = float(input('Сколько километров? :\n'))
@@ -47,25 +47,35 @@ if var == 1:
 
     # Считаем объем
     elif convertation == 4:
-        space = int(input(' 1.Литры -> галлоны\n 2. Литры -> пинты\n')
+        space = int(input(' 1. Литры -> галлоны\n 2. Литры -> пинты\n'))
         if space == 1:
-            value_space = float(input('Сколько литров? :'))
+            value_space = float(input('Сколько литров? : '))
             print(value_space,'литров составляет', round((value_space / 3.785411784), 2), 'галлонов')
-        elif value_space == 2:
-            value_space = float('Сколько литров? :\n')
+        elif space == 2:
+            value_space = float(input('Сколько литров? :\n'))
             print(value_space, 'литров составляет', round((value_space / 0.56826125), 2), 'пинт')
+    elif convertation == 5:
+        speed = float(input(' Сколько километров в час? : '))
+        print(speed, 'километров в час составляет ', round((speed / 1.60934), 2), 'миль в час')
 
 
 elif var == 2:
     print('Конвертация из неметрической в метрическую')
     convertation = int(input('Что считаем: \n 1. Температура\n 2. Вес\n 3. Длина\n 4. Объем\n 5. Скорость\n '))
+
+    # Считаем температуру
     if convertation == 1:
-        convertation == int(input(' 1. Фаренгейт - Цельсий\n 2. Кельвин - Цельсий\n'))
+        temperature = int(input(' 1. Фаренгейт - Цельсий\n 2. Кельвин - Цельсий\n'))
         if convertation == 1:
-            farengheith == float(input('Сколько градусов по Фаренгейту? :\n'))
-            print(farengheith, 'градусов по Фаренгейту составляют', (5/9) * farengheith - 32, 'градусов по Цельсию')
+            value_temperature == float(input('Сколько градусов по Фаренгейту? :\n'))
+            print(value_temperature, 'градусов по Фаренгейту составляют', (5/9) * value_temperature - 32, 'градусов по Цельсию')
         elif convertation == 2:
-            kelvin = float(input('Сколько градусов по Кельвину? :\n'))
-            print(kelvin, 'градусов по Кельвину составляет', kelvin - 273.15, 'градусов по Цельсию')
+            value_temperature = float(input('Сколько градусов по Кельвину? :\n'))
+            print(value_temperature, 'градусов по Кельвину составляет', value_temperature - 273.15, 'градусов по Цельсию')
+
+    # Считаем вес
+    if convertation == 2:
+        massa = int(input( '1. Фунты - килограммы\n 2. Унции - граммы\n'))
+
 
 

@@ -25,3 +25,18 @@ for blog in full_list:
     headers = str(r.headers)
     with open('statistics.txt', 'a', encoding='utf8') as f:
         f.write(headers + '\n \n \n')
+
+'''
+Пример поиска по списку: 
+
+mass = ['11', '12', '13', '14', '15']
+x = str(input('Введите Х: '))
+for i in mass:
+  if i == x:
+    print('Ok!')
+    break
+  else:
+    print('No!')
+    break
+    
+'''
