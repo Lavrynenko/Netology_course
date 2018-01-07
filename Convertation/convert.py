@@ -65,17 +65,51 @@ elif var == 2:
 
     # Считаем температуру
     if convertation == 1:
-        temperature = int(input(' 1. Фаренгейт - Цельсий\n 2. Кельвин - Цельсий\n'))
+        temperature = int(input(' 1. Фаренгейт -> Цельсий\n 2. Кельвин -> Цельсий\n'))
         if convertation == 1:
-            value_temperature == float(input('Сколько градусов по Фаренгейту? :\n'))
-            print(value_temperature, 'градусов по Фаренгейту составляют', (5/9) * value_temperature - 32, 'градусов по Цельсию')
+            value_temperature = float(input('Сколько градусов по Фаренгейту? :\n'))
+            print(value_temperature, 'градусов по Фаренгейту = ', round(((5/9) * value_temperature - 32), 2), ' по Цельсию')
         elif convertation == 2:
             value_temperature = float(input('Сколько градусов по Кельвину? :\n'))
-            print(value_temperature, 'градусов по Кельвину составляет', value_temperature - 273.15, 'градусов по Цельсию')
+            print(value_temperature, 'градусов по Кельвину = ', value_temperature - 273.15, ' по Цельсию')
 
     # Считаем вес
     if convertation == 2:
-        massa = int(input( '1. Фунты - килограммы\n 2. Унции - граммы\n'))
+        massa = int(input(' 1. Фунты - килограммы\n 2. Унции - граммы\n'))
+        if massa == 1:
+            value_massa = float(input('Сколько фунтов? :\n'))
+            print(value_massa, 'фунтов составляет', round((value_massa * 0.453592), 2),'килограмм')
+        elif massa == 2:
+            value_massa = float(input('Сколько унций? :\n'))
+            print(value_massa, 'унций составляет', round((value_massa * 28.3), 2),'граммов')
 
+    # Считаем длину
+    if convertation == 3:
+        dlina = int(input(' 1. Мили -> километры\n 2. Ярды -> метры\n 3. Футы -> метры\n 4. Дюймы -> сантиметры\n'))
+        if dlina == 1:
+            value_dlina = float(input('Сколько миль? :\n'))
+            print(value_dlina, 'миль =', round((value_dlina / 0.621371), 2), 'километров')
+        elif dlina == 2:
+            value_dlina = float(input('Сколько ярдов? :\n'))
+            print(value_dlina, 'ярдов =', round((value_dlina / 0.9144), 2), 'метров')
+        elif dlina == 3:
+            value_dlina = float(input('Сколько футов? :\n'))
+            print(value_dlina, 'футов =', round((value_dlina / 3.28084), 2), 'метров')
+        elif dlina == 4:
+            value_dlina = float(input('Сколько дюймов? :\n'))
+            print(value_dlina, 'дюймов =', round((value_dlina / 0.393701), 2), 'сантиметров')
 
+    # Считаем объем
+    if convertation == 4:
+        space = int(input(' 1. Галлоны -> литры\n 2. Пинты -> литры\n'))
+        if space == 1:
+            value_space = float(input('Сколько галлонов? : \n'))
+            print(value_space,'галлонов =', round((value_space * 3.785411784), 2), 'литров')
+        if space == 2:
+            value_space = float(input('Сколько пинт? : \n'))
+            print(value_space, 'пинт =', round((value_space * 0.473176473), 2), 'литров')
 
+    # Считаем скорость
+    if convertation == 5:
+        speed = float(input('Сколько миль в час? :\n'))
+        print(speed,'миль в час =', round((speed * 1.60934), 2),'километров')
