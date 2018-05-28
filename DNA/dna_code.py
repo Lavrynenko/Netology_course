@@ -6,7 +6,6 @@ dna_g = int(0)
 dna_c = int(0)
 dna_t = int(0)
 for symbol in dna_code:
-    #print(symbol)
     if symbol == 'a':
         dna_a = dna_a + 1
     elif symbol == 'g':
