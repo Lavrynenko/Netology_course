@@ -5,8 +5,8 @@ import re
 path = os.chdir('c:\\Users\\Oleksiy\\Desktop\\Полный список аптек в Украине\\')
 
 list_directory = os.listdir(path) #В переменную загоняем список файлов в целевой директории
-print('Список всех файлов \n', list_directory) #Выводим полный список файлов в каталоге
-print(type(list_directory))
+#print('Список всех файлов \n', list_directory) #Выводим полный список файлов в каталоге
+#print(type(list_directory))
 for i in list_directory:
     print('Начинаем обработку файла:', i)
     wb = openpyxl.load_workbook(i)
