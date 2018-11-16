@@ -24,14 +24,12 @@ print('Изначально:\nБоец 1 имеет здоровья:', Fighter.
 while f1.dead_level <= f1.health or f2.dead_level <= f2.health:
     print('\nРаунд:', rounds)
     print('Боец 1:', f2.health, 'жизни\nБоец 2:', f2.health, 'жизни')
-    #kick = random.randrange(1, 15)
     print('Боец 1 бьет Бойца 2 с силой:', f1.kick_level)
     f2.health = f2.health - f1.kick_level
     print('После удара у Бойца 2 осталось здоровья:', f2.health)
     if f2.health <= 0:
         break
 
-    #kick = random.randrange(1, 15)
     print('Боец 2 бьет Бойца 1 с силой:', f2.kick_level)
     f1.health = f1.health - f2.kick_level
     print('После удара у Бойца 1 осталось здоровья:', f1.health)
