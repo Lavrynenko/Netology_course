@@ -3,6 +3,7 @@ import os
 import sys
 import subprocess
 
+
 def autorization():
     host = str(input('Host?: ')) #FTP
     ftp_user = str(input('User?: ')) #Login
